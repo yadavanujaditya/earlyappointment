@@ -1,0 +1,41 @@
+<%- include('./partials/header') %>
+
+
+<div class="container"> 
+  <div class="text-center">
+     <h1 style="outline-style: solid" class="font-weight-bold py-3 bg-light text-danger mb-5 border border-primary "> EARLY APPOINTMENT</h1>
+  </div>
+
+
+<form action='/track' method='POST' class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>live status</legend>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="Mobile No.">Mobile No.</label>  
+  <div class="col-md-8">
+  <input id="mobileNum" name="mobileNum" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-8 mr-auto control-label" for="singlebutton"></label>
+  <div class="col-md-8">
+    <button id="GET YOUR APPOINTMENT" name="CHECK" class="btn btn-primary btn-block">CHECK</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</div>
+
+
+
+<%- include('./partials/footer') %>

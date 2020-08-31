@@ -1,0 +1,78 @@
+<%- include('../partials/header') %>
+
+
+<div class="container"> 
+  <div class="text-center">
+     <h1 style="outline-style: solid" class="font-weight-bold py-3 bg-light text-danger mb-5 border border-primary "> EARLY APPOINTMENT</h1>
+  </div>
+
+<!-- this post route leads to booked.ejs -->
+<form action='/booked' method='POST' class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Patient Details</legend>
+
+<!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-8  control-label" for="buttondropdown">Search</label>
+    <div class="col-md-8 ">
+      <div class="input-group">
+       <input id="search" name="search" class="form-control" placeholder="Search your doctor" type="text" required="">
+         <div class="input-group-btn">
+           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          
+          <span class="caret"></span>
+        </button>
+        <select class="dropdown-menu pull-right">
+<option value="" disabled selected>Choose your doctor</option>
+               <option value="1">Dr. D.N Mishra</option>
+                  <option value="2">Dr. Pramod Gupta</option>
+                  <option value="3">Dr. Sharad chandra</option>
+               <option value="3">Dr. Anup loyiya</option>
+            <option value="3">Dr. Manoj mishra</option>
+
+        </select>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+  <div class="form-group">
+     <label class="col-md-8 control-label" for="Patient name :">Patient name :</label>  
+    <div class="col-md-8">
+       <input id="patientName" name="patientName" type="text" placeholder="Akarsh Gupta" class="form-control input-md" required="">
+    </div>
+   </div>
+
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="Mobile No.">Mobile No.</label>  
+  <div class="col-md-8">
+  <input id="mobileNum" name="mobileNumber" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-8 mr-auto control-label" for="singlebutton"></label>
+  <div class="col-md-8">
+    <button id="GET YOUR APPOINTMENT" name="GET YOUR APPOINTMENT" class="btn btn-primary btn-block">GET YOUR APPOINTMENT</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</div>
+
+
+<%- include('../partials/footer') %>

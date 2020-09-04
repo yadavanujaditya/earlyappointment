@@ -1,0 +1,64 @@
+<%- include('../partials/header') %> 
+
+
+   
+
+
+
+<div class="container"> 
+  <div class="text-center">
+     <h1 style="outline-style: solid" class="font-weight-bold py-3 bg-light text-danger mb-5 border border-primary "> EARLY APPOINTMENT</h1>
+</div>
+</div>
+
+<div class="container" id="margintop">
+
+
+<div class="row "> 
+   <div class="column-4">
+ <h2 class="border border-default p-2 bg-danger">Patient name: <%= newData.patientName %> </h2> 
+   </div>
+</div>
+
+
+<div class="row "> 
+   <div class="column-4">
+       <h2 class="border border-default p-2 bg-danger">mobile num:  <%= newData.mobileNumber %> </h2> 
+   </div>
+</div>   
+
+
+<div class="row "> 
+   <div class="column-4">
+       <h2 class="border border-default p-2 bg-warning">YOUR NO: <%= newData.yourNumber %></h2> 
+   </div>
+</div>   
+
+
+<div class="row text-line mt-2">
+   <div class="column-4">
+       <h2 class="border border-default p-2 bg-success">CURRENT NO: ---</h2>
+   </div>
+</div>
+
+
+<div class="row text-line">
+  <div class="column-4">
+       <h3 class="mt-2 border border-default p-2 bg-primary">ESTIMATED TIME</h3> 
+       <h4> TO ARRIVE:  20 min left </h4>
+       <h4> leave fast </h4>
+   </div>
+</div>   
+</div
+
+
+
+<div>
+<a href="/" class="btn btn-outline-primary mt-5 align-items-center"=>back to home page</a>
+</div>
+
+
+<% include('../partials/footer') %> 
+
+
+

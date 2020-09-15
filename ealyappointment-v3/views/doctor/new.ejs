@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+
+
+
+<form action="/createdoctor" method="POST" class="form-horizontal">
+
+<div class="container">
+<feildset>
+
+
+
+<!-- Form Name -->
+<legend class=" text text-primary py-4">Doctor Details</legend>
+
+
+<!-- Text input--> 
+  <div class="form-group">
+     <label class="col-md-8 control-label" for=" email:">Email:</label>  
+    <div class="col-md-8">
+       <input id="email" name="email" type="text" placeholder="Akarsh Gupta" class="form-control input-md" required="">
+    </div>
+   </div>
+  
+
+
+<!-- Text input-->
+  <div class="form-group">
+     <label class="col-md-8 control-label" for=" Name:"> Name :</label>  
+    <div class="col-md-8">
+       <input id="Name" name="name" type="text" placeholder="Akarsh Gupta" class="form-control input-md" required="">
+    </div>
+   </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="Mobile No.">Mobile No.</label>  
+  <div class="col-md-8">
+  <input id="mobileNum" name="mobileNumber" type="text" placeholder="7685944578" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+
+
+<div class="form-group">
+  <label class="col-md-8 control-label" for="maxPatientLimit">Maximum Patient Limit</label>  
+  <div class="col-md-8">
+  <input id="maxPatientLimit" name="maxPatientLimit" type="text" placeholder="150" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="Per Patient Appointment Time">Per Patient Appointment Time </label>  
+  <div class="col-md-8">
+  <input id="" name="perAppointmentTime" type="text" placeholder="in minutes" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-8 mr-auto control-label" for="singlebutton"></label>
+  <div class="col-md-8">
+    <button id="GET YOUR APPOINTMENT" name="GET YOUR APPOINTMENT" class="btn btn-primary btn-block">CREATE A NEW DOCTOR</button>
+  </div>
+</div>
+
+</div>
+
+
+</feildset>
+
+
+
+
+
+
+</form>
+
+</div>
+
+
+
+<%- include('../partials/footer') %>

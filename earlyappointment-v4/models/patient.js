@@ -11,7 +11,7 @@ var patientSchema= new mongoose.Schema({
      enteredDate:String,
      timeOfregistration:{type: Date, default: Date.now },
      visitingHospitalTime:String,
-     done:Boolean,
+     done:String,
 
 })
 

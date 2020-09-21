@@ -5,11 +5,12 @@ var doctorSchema= new mongoose.Schema({
        name:String, 
        email:String,
        mobileNumber:Number,
-       maxPatientlimit:Number,
-       perAppointmnetTime:Number,
+       maxPatientLimit:Number,
+       perAppointmentTime:Number,
        startingAppointmentTime:String,
-       onLeave:Boolean,
-       pauseApppointment:Boolean,     
+       onLeave:String,
+       pauseAppointment:String,
+       note:String,     
        appointmentArray:[
                  { 
                   appointmentDate:String,

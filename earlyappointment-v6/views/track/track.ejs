@@ -1,0 +1,94 @@
+<%- include('../partials/header') %> 
+<% 
+
+var estimatedTime= newData.yourNumber-count;
+       var incMinutes= estimatedTime*4+break;
+     
+                   var k=new Date();
+                   var  todayDate=newDateString(k);
+                   var yesterdayDate=k.setDate(k.getDate-1);
+                   function newDateString(date){
+                        var a =date.getDate().toString()+"-";
+                        var b =(date.getMonth()+1).toString()+"-";
+                        var c =date.getFullYear().toString();
+                        return a+b+c;
+                  } 
+                    %>
+
+            
+          
+
+<% currentNumber=count %>
+
+<div class="container mt-2" >
+ <div class="row "> 
+   <div class="column-4">
+      <h3 class="border border-default  bg-light" >Patient name: <%= newData.patientName %> </h3> 
+   </div>
+</div>
+
+
+<div class="row "> 
+   <div class="column-4">
+       <h2 class="border border-default p-2 ">mobile num:  <%= newData.mobileNumber %> </h2> 
+   </div>
+</div>   
+
+
+<div class="row "> 
+   <div class="column-4">
+       <h2 class="border border-default p-2 ">YOUR NO: <%= newData.yourNumber %></h2> 
+   </div>
+</div>   
+
+
+<div class="row "> 
+   <div class="column-4">
+       <h2 class="border border-default p-2 ">Doctor Name <%= newData.doctorName %></h2> 
+   </div>
+</div>   
+
+
+<div class="row "> 
+   <div class="column-4">
+       <h2 class="border border-default p-2 ">Appointment Date <%= newData.enteredDate %></h2> 
+   </div>
+</div>   
+
+
+<div class="row text-line mt-2">
+   <div class="column-4">
+
+      <%   var todayDate=newDateString(k);
+               var today = new Date().getHours();
+                 if(today >= 7 && today<= 19){  %>
+         <h2 class="border border-default p-2 ">CURRENT NO:<%= count %></h2>
+                   }else if(today <= 7 && today >= 19){
+        <h2 class="border border-default p-2 ">CURRENT NO:<%= count %></h2>
+                    }else{
+                      currentNumber="check in  the morninng"
+                    }
+
+   </div>
+</div>
+
+
+<div class="row text-line">
+  <div class="column-4">
+       <h3 class="mt-1 border border-default p-2 bg-primary"></h3> 
+       <h4> TIME TO ARRIVE:  <%= start %> </h4>
+   </div>
+</div>   
+</div
+
+
+
+<div>
+<a href="/" class="btn btn-outline-primary mt-5 align-items-center"> back to home page</a>
+</div>
+
+
+<% include('../partials/footer') %> 
+
+
+

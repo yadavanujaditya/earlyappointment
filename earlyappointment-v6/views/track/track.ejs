@@ -15,10 +15,6 @@ var estimatedTime= newData.yourNumber-count;
                   } 
                     %>
 
-            
-          
-
-<% currentNumber=count %>
 
 <div class="container mt-2" >
  <div class="row "> 
@@ -58,17 +54,7 @@ var estimatedTime= newData.yourNumber-count;
 
 <div class="row text-line mt-2">
    <div class="column-4">
-
-      <%   var todayDate=newDateString(k);
-               var today = new Date().getHours();
-                 if(today >= 7 && today<= 19){  %>
-         <h2 class="border border-default p-2 ">CURRENT NO:<%= count %></h2>
-                   }else if(today <= 7 && today >= 19){
-        <h2 class="border border-default p-2 ">CURRENT NO:<%= count %></h2>
-                    }else{
-                      currentNumber="check in  the morninng"
-                    }
-
+  <h2 class="border border-default p-2 ">CURRENT NO:<%= count %></h2>
    </div>
 </div>
 

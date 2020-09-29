@@ -1,0 +1,13 @@
+<%- include('./partials/header') %>
+
+<h1> this is the admin page </h1>
+<a href="/createdoctor" class="btn btn-success">Create Doctor</a>
+
+<% foundAll.forEach(function(newData){  %>
+
+<h2>	<%= newData.name  %>  </h2>
+
+<% })  %>
+
+
+<%- include('./partials/footer') %>

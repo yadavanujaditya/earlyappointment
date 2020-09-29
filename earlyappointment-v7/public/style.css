@@ -1,0 +1,59 @@
+  /*ye trackk.ejs wale hai*/
+    body{
+      background-color: #fff2f2;
+  
+}
+
+.groupData{
+        text-transform:uppercase;
+        font-size:27px; 
+        font-weight:Normal;
+       
+}
+
+.groupAppend{
+    width:450px;
+    width:100%;
+     font-weight:Bold; 
+     text-align:center;
+     
+}
+
+#contain{
+  margin:45px 0;
+  font-family: 'Roboto', sans-serif;
+ 
+}
+.bgcolor{
+  background-color:rgb(255, 171, 145,0.6);
+  padding:5px;
+}
+  .hour{
+    background-color:#ffa6a6;
+  }
+  .note{
+    font-weight:Bold;
+    font-size:20px;
+  }
+     /* ye secret.ejs wale hai*/
+   .hide{
+     display:none;
+   }
+   .show {
+     display:block;
+   }
+
+  .paused{
+    background-color:#f06c5b;
+  }
+
+  
+/* ye footer wale page k liye hai*/
+.footer{
+	position:fixed;
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+}
+over
+

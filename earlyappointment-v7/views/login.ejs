@@ -1,0 +1,30 @@
+<%- include('./partials/header') %> 
+
+
+
+
+<form action="/login" method="POST">
+
+
+  <div class="container">
+         <h1>Login</h1>
+             <div class="row">
+                  
+                        <div class="col-8">
+                            <input type="text"    class="form-control"  name="username"  placeholder="username">
+                        </div>   
+                  
+              </div>         
+              <div class="row py-2">
+                  
+                        <div class="col-8">
+                            <input type="password"    class="form-control"  name="password"  placeholder="password">
+                        </div>   
+                 
+              </div>         
+              <input  class="btn btn-primary"type="submit" value="submit">
+
+   </div>
+</form>
+
+<%- include('./partials/footer') %> 

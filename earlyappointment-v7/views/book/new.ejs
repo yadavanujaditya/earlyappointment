@@ -1,0 +1,81 @@
+<%- include('../partials/header') %>
+
+
+
+<!-- this post route leads to booked.ejs -->
+<form action='/booked' method='POST' class="form-horizontal">
+<fieldset>
+
+<div class="container">
+
+<!-- Form Name -->
+<legend class="py-4">Patient Details</legend>
+
+
+<!-- Text input-->
+  <div class="form-group">
+     <label class="col-md-8 control-label" for="Appointment Date">Your Appointment Date</label>  
+    <div class="col-md-8">
+       <input id="enteredDate" name="enteredDate" type="date" placeholder="" class="form-control input-md" required="">
+    </div>
+   </div>
+
+
+
+
+<!-- Button Drop Down -->
+<label class="col-md-8 control-label" for="doctorName">Select Your Doctor</label>
+<div class="input-group col-md-8 mb-3">
+  <select class="custom-select" name="doctorName" id="inputGroupSelect02" required="">
+       <option selected disabled  value="  " > Choose Your Doctor</option>    
+       <% found.forEach(function(oneDoctor){   %>
+
+     <option  value="<%= oneDoctor.name %>"  > <%= oneDoctor.name %> </option>    
+
+       <% }) %>
+
+  </select>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="Patient Name">Patient Name</label>  
+  <div class="col-md-8">
+  <input id="patientName" name="patientName" type="text" placeholder="Akarsh Gupta" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-8 control-label" for="Mobile No.">Mobile No.</label>  
+  <div class="col-md-8">
+  <input id="mobileNumber" name="mobileNumber" type="Number" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-8 mr-auto control-label" for="singlebutton"></label>
+  <div class="col-md-8">
+    <button id="GET YOUR APPOINTMENT" name="GET YOUR APPOINTMENT" class="btn btn-primary btn-block">GET YOUR APPOINTMENT</button>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+</fieldset>
+</form>
+
+</div>
+
+
+<%- include('../partials/footer') %>

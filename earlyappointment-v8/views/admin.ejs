@@ -1,0 +1,94 @@
+<%- include('./partials/header') %>
+
+<% 
+                   var k=new Date;
+                   var  enteredDate=newDateString(k);
+                   function newDateString(date){
+                        var a =date.getDate().toString();
+                        var b =(date.getMonth()+1);
+                        if(b<10){
+                          var e="0"+b.toString()+"-";
+                        }else{
+                          var e=b.toString()+"-";
+                        }
+                        var c=date.getFullYear().toString()+"-";
+                        return c+e+a;
+                 }
+                 var secretDate;
+    %>
+
+    <% if(secretDate){
+          var enteredDate=secretDate;
+    } %>
+
+
+   <div class="container">
+    <div class="row mt-1">
+          <div class="col-4">
+               <a href="/createdoctor" class="btn btn-dark btn-sm">Create Doctor</a>
+          </div>
+          <div class="col-8 d-flex justify-content-end">
+               <form  action="/adminDate" method="POST" class="form-inline form-group"> 
+                 <div class="row">
+                 <div class="col-9">
+                      <input type="date" value="<%=enteredDate%>" name="adminDate" class="input-group p-1 border-0">            
+                  </div>
+                   <div class="col-3">
+                     <button id="Get" class="btn getButton btn-dark btn-sm justify-content " >Get</button>
+                   </div>
+                 </div>
+              </form>
+          </div>
+     </div>
+</div>
+
+
+
+
+
+<table class="table ">  
+  <thead>
+  <% foundDoctors.forEach(function(doctor){  %>
+    <tr>
+      <th scope="col"><%=doctor.name %></th>
+      <th scope="col"><%=doctor.email %></th>
+      <th scope="col"></th>
+      <th scope="col">
+             <a id="deleteDoctor" name="deleteDoctor" value="" class="btn btn-danger btn-sm mr-2" href="/delete/doctor/<%=doctor._id%>">Delete</a>
+      </th>
+    </tr>
+  </thead>
+  
+    
+  <tbody>
+  
+   <% doctor.appointmentArray.forEach(function(found){  
+                 if(found.appointmentDate==enteredDate){  %>
+  <thead>
+    <tr>
+    <th scope="col"> No.</th>
+      <th scope="col">Curr. No.</th>
+      <th scope="col">Mobile Number</th>
+      <th scope="col"><%=found.appointmentDate%></th>
+    </tr>
+  </thead>
+
+  <%   found.appointments.forEach(function(ble){    %>
+     
+  <tr>
+     <td scope="col"><%=ble.yourNumber%></th>
+      <td scope="col"><%=found.currentNumber%></th>
+      <td scope="col"><%=ble.mobileNumber%></th>
+     <td>       
+            <a id="deleteDoctor" name="deleteDoctor" value="" class="btn btn-danger btn-sm mr-2"  href="/delete/patient/<%=ble._id%>">Delete</a>
+    </td>
+  </tr>
+<%             })   }    })  })      %>  
+ </tbody>
+</table>
+
+
+
+
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,83 @@
+<%- include('../partials/header') %> 
+
+<%         
+             var td=new Date();
+             var sat= start;
+             var sah= Number(sat.split(':')[0]);
+             var sam= Number(sat.split(':')[1]);
+             var wah=sah-1;             
+             var cat= close;
+             var cah= Number(cat.split(':')[0]);
+             var cam= Number(cat.split(':')[1]);
+             var cth= td.getHours();
+             var ctm= td.getMinutes();
+
+
+var diff= newData.yourNumber-count;
+       var incMinutes= diff*per;
+       var estimatedTime=new Date(td.getTime()+incMinutes*60000).toLocaleTimeString();
+       
+   %>
+          <%  if(count<= newData.yourNumber) {%>
+  <div id="contain">
+              <h3 class="groupAppend"> Patient Name:   <span class="groupData">    <%=  newData.patientName    %>  </span>      </h3>
+              <h3 class="groupAppend"> Mobile Number:    <span class="groupData">    <%=  newData.mobileNumber   %>  </span>      </h3>
+              <h3 class="groupAppend"> Doctor Name:       <span class="groupData">    <%=  newData.doctorName     %>  </span>      </h3>
+              <h3 class="groupAppend"> Appointment Date:  <span class="groupData">    <%=  ad   %>  </span>      </h3>
+              <h3 class="groupAppend"> Your Number:    <span class="groupData  bgcolor ">    <%=  newData.yourNumber  %>  </span>  </h3>
+            
+
+<%  if(cth==sah){
+          if(ctm>=sam){                   %>
+                  <h3 class="groupAppend"> Current Number: <span class="groupData bgcolor"> <%=  count %> </span> </h3>
+<%      }else{                             %>
+                 <h3 class="groupAppend"> Current Number: <span class="groupData bgcolor bold"> - </span> </h3>
+<%      }                                  %>
+<%      }else if(cth == cah){ 
+        if(ctm<=cam){                      %>
+                 <h3 class="groupAppend"> Current Number: <span class="groupData bgcolor"> <%=  count %> </span> </h3>
+<%      }else{                             %>
+                <h3 class="groupAppend"> Current Number: <span class="groupData bgcolor bold"> - </span> </h3>
+ <%    } 
+       }else if(cth>sah && cth < cah){      %>
+               <h3 class="groupAppend"> Current Number: <span class="groupData bgcolor"> <%=  count %> </span> </h3>
+<%     } else{                             %>
+                 <h3 class="groupAppend"> Current Number: <span class="groupData bgcolor bold"> - </span> </h3>       
+<%     }  %>
+
+
+
+<%  if(cth==wah){
+          if(ctm>=sam){                   %>
+                  <h4 class="groupAppend bgcolor">Reach  Hospital At <%=start%></h3>
+<%      }else{                             %>
+                 <h4 class="groupAppend checktime bgcolor"> Doctor starts seeing Patients At:<span class="groupData bgcolor"><%=start%></span>AM<br>  Check Time To Reach Hospital <span class="hour">1 hour before</span></h4>
+<%      }                                  %>
+<%      }else if(cth == cah){ 
+        if(ctm<=cam){                      %>
+                 <h4 class="groupAppend bgcolor">Reach Hospital At  <%=estimatedTime%></h3>
+<%      }else{                             %>
+                 <h4 class="groupAppend checktime bgcolor"> Doctor starts seeing Patients At:<span class="groupData bgcolor"><%=start%></span>AM<br>  Check Time To Reach Hospital <span class="hour">1 hour before</span></h4>
+<%      } }else if(cth > wah&& cth < cah){   
+                if(cth < sah){     %>
+                         <h4 class="groupAppend bgcolor">Reach  Hospital At <%=start%></h3>
+<%                }else{     %>
+                         <h4 class="groupAppend bgcolor">Reach  Hospital At <%=estimatedTime%></h3>
+<%                }           %>
+                  
+<%     } else{                             %>
+                 <h4 class="groupAppend checktime bgcolor"> Doctor starts seeing Patients At:<span class="groupData bgcolor"><%=start%></span>AM<br>  Check Time To Reach Hospital <span class="hour">1 hour before</span></h4>
+                
+<%     }                                       %>                                
+
+         <h4 class="groupAppend">Note:<span class="note"><%=note%></span></h3>
+
+</div>      
+        <%   }else{  %>
+             <h4 class="groupAppend checktime bgcolor mt-5 ">Sorry!!!...You Missed Your Appointment<br>Contact At Hospital for Further Details </h4>
+      <%       }     %>
+
+<%- include('../partials/footer') %> 
+<script type="text/javascript" src="/public/js/earlyappointment.js"></script>
+
+

@@ -68,6 +68,8 @@ router.post('/booked',function(req,res){
                        for(var i=0;i<found.appointmentArray.length;i++){
                               if(found.appointmentArray[i].appointmentDate===enteredDate){
                                 var start=found.startingAppointmentTime;
+				var eveStart=found.startingEveningAppointmentTime;
+				var maxMorningLimit=found.maxMorningPatientlimit;
                                 var close=found.closingAppointmentTime;
                                 var note=found.note;
                                 var per=found.perAppointmentTime;

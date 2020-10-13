@@ -33,6 +33,8 @@
              var diff= newData.yourNumber-count;
              var incMinutes= diff*per;
              var estimatedTime=new Date(td.getTime()+incMinutes*60000).toLocaleTimeString();
+             var d=ad.split('-');
+            var appointmentDate=d[2]+"-"+d[1]+"-"+d[0];
           
 
    %>
@@ -46,7 +48,7 @@
               <h3 class="groupAppend"> Patient Name:   <span class="groupData">    <%=  newData.patientName    %>  </span>      </h3>
               <h3 class="groupAppend"> Mobile Number:    <span class="groupData">    <%=  newData.mobileNumber   %>  </span>      </h3>
               <h3 class="groupAppend"> Doctor Name:       <span class="groupData">    <%=  newData.doctorName     %>  </span>      </h3>
-              <h3 class="groupAppend"> Appointment Date:  <span class="groupData">    <%=  ad   %>  </span>      </h3>
+              <h3 class="groupAppend"> Appointment Date:  <span class="groupData">    <%= appointmentDate   %>  </span>      </h3>
               <h3 class="groupAppend"> Your Number:    <span class="groupData  bgcolor ">    <%=  newData.yourNumber  %>  </span>  </h3>
             
 
@@ -104,7 +106,7 @@
               <h3 class="groupAppend"> Patient Name:   <span class="groupData">    <%=  newData.patientName    %>  </span>      </h3>
               <h3 class="groupAppend"> Mobile Number:    <span class="groupData">    <%=  newData.mobileNumber   %>  </span>      </h3>
               <h3 class="groupAppend"> Doctor Name:       <span class="groupData">    <%=  newData.doctorName     %>  </span>      </h3>
-              <h3 class="groupAppend"> Appointment Date:  <span class="groupData">    <%=  ad   %>  </span>      </h3>
+              <h3 class="groupAppend"> Appointment Date:  <span class="groupData">    <%=  appointmentDate   %>  </span>      </h3>
               <h3 class="groupAppend"> Your Number:    <span class="groupData  bgcolor ">    <%=  newData.yourNumber  %>  </span>  </h3>
               <h4 class="groupAppend">Note:<span class="note"><%=note%></span></h3>
           </div>

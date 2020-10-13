@@ -1,0 +1,77 @@
+  /*ye trackk.ejs wale hai*/
+    body{
+      background-color: #fff2f2;
+      /*background-image:url("public/image/sethscope")*/
+  
+}
+
+.groupData{
+        text-transform:uppercase;
+        font-size:20px; 
+        font-weight:Normal;
+       
+}
+
+.groupAppend{
+    width:450px;
+    width:100%;
+     font-weight:bold; 
+     font-size:20px; 
+     text-align:center;
+     
+}
+
+#contain{
+  margin:45px 0;
+  font-family: 'Roboto', sans-serif;
+ 
+}
+.bgcolor{
+  background-color:rgb(255, 171, 145,0.6);
+  padding:5px;
+}
+  .hour{
+    background-color:#ffa6a6;
+  }
+  .note{
+    font-weight:Bold;
+    font-size:20px;
+  }
+     /* ye secret.ejs wale hai*/
+   .hide{
+     display:none;
+   }
+   .show {
+     display:block;
+   }
+
+  .paused{
+    background-color:#f06c5b;
+  }
+
+  .secretColor{
+    background-color:#d1d1d1;
+  }
+
+  
+/* ye footer wale page k liye hai*/
+.footer{
+	position:fixed;
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+}
+/* ye register wale form ka hai*/
+.heading{
+  font-size:40px;
+}
+
+input{
+  font-size:18px;
+  background-color:#f7f7f7;
+  width:90%;
+  border:0px solid white;
+    outline:none;
+  padding-top:10px;
+  color:#2980b9;
+}
